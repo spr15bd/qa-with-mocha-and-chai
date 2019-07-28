@@ -1,58 +1,47 @@
-<!-- This is a static file -->
-<!-- served from your routes in server.js -->
-
-<!-- You might want to try something fancier: -->
-<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
-<!-- pug: https://pugjs.org/ -->
-<!-- haml: http://haml.info/ -->
-<!-- hbs(handlebars): http://handlebarsjs.com/ -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title>Welcome to Glitch!</title>
-    <meta name="description" content="A cool thing made with Glitch">
-    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <title>Testing Prototype</title>
+    <meta name="description" content="A cool thing made with HyperDev">
+    <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon"/>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
-    
-    <!-- import the webpage's client-side javascript file -->
-    <script src="/client.js" defer></script>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header>
       <h1>
-        A Dream of the Future
+        FCC - QA &amp; Automated Testing
       </h1>
     </header>
-
     <main>
-      <p class="bold">Oh hi,</p>
-      
-      <p>Tell me your hopes and dreams:</p>
-      
-      <form>
-        <input name="dream" type="text" maxlength="100" placeholder="Dreams!" aria-labelledby="submit-dream">
-        <button type="submit" id="submit-dream">Submit Dream</button>
-      </form>
-      
-      <section class="dreams">
-        <ul id="dreams"></ul>
-      </section>
+      <h2>Functional Tests Example</h2>
+      <div class="pane">
+        <h4>Famous Italian Explorers</h4>
+        <form action="/travellers" method="POST" id="f1">
+          <label for="i1">surname: </label>
+          <input id="i1" type="text" name="surname" placeholder="try with 'Polo'...">
+          <button type="submit">submit</button>
+        </form>
+        <div id="tn"></div>
+      </div>
+      <div class="pane">
+        <p class="specs">
+          Input form HTML:<br>
+          ----------------<br>
+          &lt;input type="text" name="surname"&gt;<br>
+          &lt;button type="submit"&gt;submit&lt;/button&gt;<br>
+          <br>
+          Results div HTML (after Ajax):<br>
+          ------------------------------<br>
+          &lt;p&gt;first name:&lt;span id="name"&gt;[name]&lt;/span&gt;&lt;/p&gt;<br>
+          &lt;p&gt;last name:&lt;span id="surname"&gt;[surname]&lt;/span&gt;&lt;/p&gt;<br>
+          &lt;p&gt;dates:&lt;span id="dates"&gt;[birth - death]&lt;/span&gt;&lt;/p&gt;<br>
+        </p>
+      </div>
     </main>
-
-    <footer>
-      Made with <a href="https://glitch.com">Glitch</a>!
-    </footer>
-
-    <!-- include the Glitch button to show what the webpage is about and
-          to make it easier for folks to view source and remix -->
-    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
-    <script src="https://button.glitch.me/button.js"></script>
-
+    <script src='/client.js'></script>
   </body>
 </html>
